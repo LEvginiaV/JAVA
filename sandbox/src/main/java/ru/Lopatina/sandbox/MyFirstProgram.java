@@ -1,3 +1,5 @@
+package ru.Lopatina.sandbox;
+
 public class MyFirstProgram {
 
 	public static void main (String[] args) {
