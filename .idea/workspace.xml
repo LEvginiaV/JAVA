@@ -82,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ContactCreationTests">
+  <component name="RunManager" selected="Gradle.GroupCreationTests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -222,8 +222,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ContactCreationTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
+        <item itemvalue="Gradle.ContactCreationTests" />
         <item itemvalue="Gradle.DistanceTest" />
         <item itemvalue="Gradle.DistanceTest.testDistance2" />
         <item itemvalue="Gradle.DistanceTest.testDistance1" />
