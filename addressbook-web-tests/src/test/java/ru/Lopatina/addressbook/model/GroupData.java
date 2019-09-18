@@ -1,4 +1,4 @@
-package ru.Lopatina.addressbook;
+package ru.Lopatina.addressbook.model;
 
 public class GroupData {
     private final String name;

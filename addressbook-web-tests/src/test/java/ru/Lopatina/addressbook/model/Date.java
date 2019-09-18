@@ -1,4 +1,4 @@
-package ru.Lopatina.addressbook;
+package ru.Lopatina.addressbook.model;
 
 public class Date {
     private final String day;
