@@ -69,6 +69,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.sandbox" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.Lopatina.addressbook.appmanager" />
       <recent name="ru.Lopatina.addressbook" />
@@ -86,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ContactModificationTests">
+  <component name="RunManager" selected="Gradle.Tests in 'ru.Lopatina.addressbook.tests'">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -226,10 +229,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
         <item itemvalue="Gradle.ContactModificationTests" />
         <item itemvalue="Gradle.GroupModificationTests" />
         <item itemvalue="Gradle.ContactDeletionTests" />
-        <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
         <item itemvalue="Gradle.ContactCreationTests" />
       </list>
     </recent_temporary>

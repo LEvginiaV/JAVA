@@ -68,7 +68,7 @@ public class ContactHelper extends HelperBase {
     public void chooseAvatar(String img) {
       String dir = new String(System.getProperty("user.dir"));
       System.out.println(dir);
-      type(By.name("photo"),dir+img);
+      typeImg(By.name("photo"),dir+img);
     }
 
     public void fillNameForms(String firstName, String middleName, String lastName, String nickName) {
