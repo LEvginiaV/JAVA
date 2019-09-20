@@ -3,7 +3,7 @@ package ru.Lopatina.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import ru.Lopatina.addressbook.model.Date;
+import ru.Lopatina.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
 
@@ -12,20 +12,11 @@ public class ContactHelper extends HelperBase {
     }
 
     public void returnToHomePage() {
-      click(By.linkText("home page"));
+        click(By.linkText("home page"));
     }
 
     public void submitContactCreation() {
-      click(By.xpath("(//input[@name='submit'])[2]"));
-    }
-
-    public void fillNotes(String Notes) {
-      type(By.name("notes"), Notes);
-    }
-
-    public void fillHomeContacts(String homeAdress, String homePhone) {
-      type(By.name("address2"), homeAdress);
-      type(By.name("phone2"), homePhone);
+        click(By.xpath("(//input[@name='submit'])[2]"));
     }
 
     public void chooseGroup(String groupTitle) {
@@ -36,50 +27,43 @@ public class ContactHelper extends HelperBase {
         new Select(wd.findElement(locator)).selectByVisibleText(groupTitle);
     }
 
-    public void fillDates(Date birthDate, Date anniversaryDate) {
-        select(By.name("bday"), birthDate.getDay());
-        select(By.name("bmonth"), birthDate.getMonth());
-        type(By.name("byear"), birthDate.getYear());
-        select(By.name("aday"), anniversaryDate.getDay());
-        select(By.name("amonth"), anniversaryDate.getMonth());
-        type(By.name("ayear"), anniversaryDate.getYear());
-    }
-
-    public void fillWebContacts(String email, String email2, String email3, String homepage) {
-      type(By.name("email"), email);
-      type(By.name("email2"), email2);
-      type(By.name("email3"), email3);
-      type(By.name("homepage"), homepage);
-    }
-
-    public void fillPhoneNumbers(String homePhone, String mobilePhone, String workPhone, String fax) {
-      type(By.name("home"),homePhone);
-      type(By.name("mobile"), mobilePhone);
-      type(By.name("work"), workPhone);
-      type(By.name("fax"), fax);
-    }
-
-    public void fillAboutWork(String position, String company, String companyAddress) {
-      type(By.name("title"), position);
-      type(By.name("company"), company);
-      type(By.name("address"), companyAddress);
-    }
-
+    /*
     public void chooseAvatar(String img) {
       String dir = new String(System.getProperty("user.dir"));
       System.out.println(dir);
       typeImg(By.name("photo"),dir+img);
     }
+    */
 
-    public void fillNameForms(String firstName, String middleName, String lastName, String nickName) {
-      type(By.name("firstname"), firstName);
-      type(By.name("middlename"), middleName);
-      type(By.name("lastname"), lastName);
-      type(By.name("nickname"), nickName);
+    public void fillContactForms(ContactData contactData) {
+        type(By.name("firstname"), contactData.getFirstName());
+        type(By.name("middlename"), contactData.getMiddleName());
+        type(By.name("lastname"), contactData.getLastName());
+        type(By.name("nickname"), contactData.getNickName());
+        type(By.name("title"), contactData.getPosition());
+        type(By.name("company"), contactData.getCompany());
+        type(By.name("address"), contactData.getCompanyAddress());
+        type(By.name("home"), contactData.getHomePhone());
+        type(By.name("mobile"), contactData.getMobilePhone());
+        type(By.name("work"), contactData.getWorkPhone());
+        type(By.name("fax"), contactData.getFax());
+        type(By.name("email"), contactData.getEmail());
+        type(By.name("email2"), contactData.getEmail2());
+        type(By.name("email3"), contactData.getEmail3());
+        type(By.name("homepage"), contactData.getHomepage());
+        select(By.name("bday"), contactData.getBday());
+        select(By.name("bmonth"), contactData.getBmonth());
+        type(By.name("byear"), contactData.getByear());
+        select(By.name("aday"), contactData.getAday());
+        select(By.name("amonth"), contactData.getAmonth());
+        type(By.name("ayear"), contactData.getAyear());
+        type(By.name("address2"), contactData.getHomeAdress());
+        type(By.name("phone2"), contactData.getHomePhone2());
+        type(By.name("notes"), contactData.getNotes());
     }
 
     public void initContactCreation() {
-      click(By.linkText("add new"));
+        click(By.linkText("add new"));
     }
 
     public void selectContact() {
