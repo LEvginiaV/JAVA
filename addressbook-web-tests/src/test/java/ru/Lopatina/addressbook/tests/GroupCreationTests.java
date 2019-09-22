@@ -1,12 +1,12 @@
 package ru.Lopatina.addressbook.tests;
 
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 import ru.Lopatina.addressbook.model.GroupData;
 import ru.Lopatina.addressbook.model.TestBase;
 
 public class GroupCreationTests extends TestBase {
 
-    @Test
+  @Test
   public void testGroupCreation() throws Exception {
     app.getNavigationHelper().gotoGroupPage();
     app.getGroupHelper().createGroup(new GroupData("test1", null, null));

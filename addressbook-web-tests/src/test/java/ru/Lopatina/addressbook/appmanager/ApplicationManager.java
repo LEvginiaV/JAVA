@@ -10,49 +10,49 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-    public WebDriver wd;
+  public WebDriver wd;
 
-    private ContactHelper contactHelper;
-    private SessionHelper sessionHelper;
-    private NavigationHelper navigationHelper;
-    private GroupHelper groupHelper;
-    private String browser;
+  private ContactHelper contactHelper;
+  private SessionHelper sessionHelper;
+  private NavigationHelper navigationHelper;
+  private GroupHelper groupHelper;
+  private String browser;
 
-    public ApplicationManager(String browser) {
-        this.browser = browser;
+  public ApplicationManager(String browser) {
+    this.browser = browser;
+  }
+
+  public void init() {
+    if (browser.equals(BrowserType.FIREFOX)) {
+      wd = new FirefoxDriver();
+    } else if (browser.equals(BrowserType.CHROME)) {
+      wd = new ChromeDriver();
+    } else if (browser.equals(BrowserType.IE)) {
+      wd = new InternetExplorerDriver();
     }
 
-    public void init() {
-        if (browser.equals(BrowserType.FIREFOX)) {
-            wd = new FirefoxDriver();
-        } else if (browser.equals(BrowserType.CHROME)) {
-            wd = new ChromeDriver();
-        } else if (browser.equals(BrowserType.IE)) {
-            wd = new InternetExplorerDriver();
-        }
+    wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    wd.get("http://localhost/addressbook/");
+    contactHelper = new ContactHelper(wd);
+    groupHelper = new GroupHelper(wd);
+    navigationHelper = new NavigationHelper(wd);
+    sessionHelper = new SessionHelper(wd);
+    sessionHelper.login("admin", "secret");
+  }
 
-        wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        wd.get("http://localhost/addressbook/");
-        contactHelper = new ContactHelper(wd);
-        groupHelper = new GroupHelper(wd);
-        navigationHelper = new NavigationHelper(wd);
-        sessionHelper = new SessionHelper(wd);
-        sessionHelper.login("admin", "secret");
-    }
+  public void stop() {
+    wd.quit();
+  }
 
-    public void stop() {
-        wd.quit();
-    }
+  public GroupHelper getGroupHelper() {
+    return groupHelper;
+  }
 
-    public GroupHelper getGroupHelper() {
-        return groupHelper;
-    }
+  public NavigationHelper getNavigationHelper() {
+    return navigationHelper;
+  }
 
-    public NavigationHelper getNavigationHelper() {
-        return navigationHelper;
-    }
-
-    public ContactHelper getContactHelper() {
-        return contactHelper;
-    }
+  public ContactHelper getContactHelper() {
+    return contactHelper;
+  }
 }
