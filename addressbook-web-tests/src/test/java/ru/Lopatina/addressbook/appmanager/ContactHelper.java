@@ -3,6 +3,7 @@ package ru.Lopatina.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import ru.Lopatina.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
@@ -11,20 +12,12 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
-    public void returnToHomePage() {
-        click(By.linkText("home page"));
-    }
-
     public void submitContactCreation() {
         click(By.xpath("(//input[@name='submit'])[2]"));
     }
 
-    public void chooseGroup(String groupTitle) {
-        select(By.name("new_group"), groupTitle);
-    }
-
-    private void select(By locator, String groupTitle) {
-        new Select(wd.findElement(locator)).selectByVisibleText(groupTitle);
+    private void select(By locator, String value) {
+        new Select(wd.findElement(locator)).selectByVisibleText(value);
     }
 
     /*
@@ -35,7 +28,7 @@ public class ContactHelper extends HelperBase {
     }
     */
 
-    public void fillContactForms(ContactData contactData) {
+    public void fillContactForms(ContactData contactData, boolean creation) {
         type(By.name("firstname"), contactData.getFirstName());
         type(By.name("middlename"), contactData.getMiddleName());
         type(By.name("lastname"), contactData.getLastName());
@@ -57,6 +50,11 @@ public class ContactHelper extends HelperBase {
         select(By.name("aday"), contactData.getAday());
         select(By.name("amonth"), contactData.getAmonth());
         type(By.name("ayear"), contactData.getAyear());
+        if (creation) {
+            select(By.name("new_group"), contactData.getGroup());
+        } else {
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
+        }
         type(By.name("address2"), contactData.getHomeAdress());
         type(By.name("phone2"), contactData.getHomePhone2());
         type(By.name("notes"), contactData.getNotes());
