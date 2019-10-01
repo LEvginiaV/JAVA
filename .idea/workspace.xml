@@ -233,8 +233,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.GroupModificationTests" />
-        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupDeletionTests" />
+        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
         <item itemvalue="Gradle.ContactModificationTests" />
       </list>
