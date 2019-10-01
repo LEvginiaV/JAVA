@@ -92,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.GroupDeletionTests">
+  <component name="RunManager" selected="Gradle.GroupModificationTests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -232,9 +232,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GroupDeletionTests" />
         <item itemvalue="Gradle.GroupModificationTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
+        <item itemvalue="Gradle.GroupDeletionTests" />
         <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
         <item itemvalue="Gradle.ContactModificationTests" />
       </list>
