@@ -5,8 +5,7 @@ import org.testng.annotations.Test;
 import ru.Lopatina.addressbook.model.GroupData;
 import ru.Lopatina.addressbook.model.TestBase;
 
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class GroupCreationTests extends TestBase {
 
@@ -23,7 +22,10 @@ public class GroupCreationTests extends TestBase {
 
     group.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
     before.add(group);
-    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+    Comparator<? super GroupData> ById = ((g1, g2) -> Integer.compare(g1.getId(), g2.getId()));
+    before.sort(ById);
+    after.sort(ById);
+    Assert.assertEquals(before, after);
   }
 
 }
