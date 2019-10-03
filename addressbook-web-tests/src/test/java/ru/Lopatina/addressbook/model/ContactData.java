@@ -1,6 +1,9 @@
 package ru.Lopatina.addressbook.model;
 
+import java.util.Objects;
+
 public class ContactData {
+  private int id;
   private final String firstName;
   private final String middleName;
   private final String lastName;
@@ -28,6 +31,7 @@ public class ContactData {
   private final String notes;
 
   public ContactData(String firstName, String middleName, String lastName, String nickName, String position, String company, String companyAddress, String homePhone, String mobilePhone, String workPhone, String fax, String email, String email2, String email3, String homepage, String bday, String bmonth, String byear, String aday, String amonth, String ayear, String group, String homeAdress, String homePhone2, String Notes) {
+    this.id = Integer.MAX_VALUE;
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
@@ -53,6 +57,39 @@ public class ContactData {
     this.homeAdress = homeAdress;
     this.homePhone2 = homePhone2;
     notes = Notes;
+  }
+
+  public ContactData(int id, String firstName, String middleName, String lastName, String nickName, String position, String company, String companyAddress, String homePhone, String mobilePhone, String workPhone, String fax, String email, String email2, String email3, String homepage, String bday, String bmonth, String byear, String aday, String amonth, String ayear, String group, String homeAdress, String homePhone2, String Notes) {
+    this.id = id;
+    this.firstName = firstName;
+    this.middleName = middleName;
+    this.lastName = lastName;
+    this.nickName = nickName;
+    this.position = position;
+    this.company = company;
+    this.companyAddress = companyAddress;
+    this.homePhone = homePhone;
+    this.mobilePhone = mobilePhone;
+    this.workPhone = workPhone;
+    this.fax = fax;
+    this.email = email;
+    this.email2 = email2;
+    this.email3 = email3;
+    this.homepage = homepage;
+    this.bday = bday;
+    this.bmonth = bmonth;
+    this.byear = byear;
+    this.aday = aday;
+    this.amonth = amonth;
+    this.ayear = ayear;
+    this.group = group;
+    this.homeAdress = homeAdress;
+    this.homePhone2 = homePhone2;
+    notes = Notes;
+  }
+
+  public int getId() {
+    return id;
   }
 
   public String getFirstName() {
@@ -153,5 +190,20 @@ public class ContactData {
 
   public String getNotes() {
     return notes;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    ContactData that = (ContactData) o;
+    return id == that.id &&
+            Objects.equals(firstName, that.firstName) &&
+            Objects.equals(lastName, that.lastName);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, firstName, lastName);
   }
 }
