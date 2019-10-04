@@ -88,6 +88,10 @@ public class ContactData {
     notes = Notes;
   }
 
+  public void setId(int id) {
+    this.id = id;
+  }
+
   public int getId() {
     return id;
   }
@@ -190,6 +194,15 @@ public class ContactData {
 
   public String getNotes() {
     return notes;
+  }
+
+  @Override
+  public String toString() {
+    return "ContactData{" +
+            "id=" + id +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            '}';
   }
 
   @Override
