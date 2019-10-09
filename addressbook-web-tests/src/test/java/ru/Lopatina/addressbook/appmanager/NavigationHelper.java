@@ -18,10 +18,10 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("groups"));
   }
 
-  public void gotoHomePage() {
+  public void homePage() {
     if (isElementPresent(By.id("mailtable"))) {
       return;
     }
-    click(By.linkText("home page"));
+    click(By.linkText("home"));
   }
 }
