@@ -6,6 +6,7 @@ import ru.Lopatina.addressbook.model.GroupData;
 import ru.Lopatina.addressbook.model.Groups;
 import ru.Lopatina.addressbook.model.TestBase;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
@@ -24,8 +25,8 @@ public class GroupDeletionTests extends TestBase {
     Groups before = app.group().all();
     GroupData deletedGroup = before.iterator().next();
     app.group().delete(deletedGroup);
+    assertThat(app.contact().count(), equalTo(before.size() - 1));
     Groups after = app.group().all();
-    assertThat(after.size(), equalTo(before.size() - 1));
     assertThat(after, equalTo(before.without(deletedGroup)));
   }
 
