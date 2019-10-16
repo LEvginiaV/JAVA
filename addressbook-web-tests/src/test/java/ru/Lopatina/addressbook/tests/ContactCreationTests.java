@@ -18,7 +18,7 @@ public class ContactCreationTests extends TestBase {
             "7-09-46").withMobilePhone("8-924-345-23-34").withWorkPhone("345-45-35").withFax("234-45-23").withEmail(
             "Email1@mail.ru").withEmail2("Email2@bk.ru").withEmail3("Email3@gmail.ru").withHomepage(
             "vk.com").withBday("12").withBmonth("March").withByear("1995").withAday("11").withAmonth(
-            "June").withAyear("2001").withGroup("test1").withHomeAdress(
+            "June").withAyear("2001").withGroup("test1").withHomeAddress(
             "SPb, Nevsky avenu").withHomePhone2("345-56-34").withPosition("Fish seller");
     app.contact().create(contact, true);
     Contacts after = app.contact().all();

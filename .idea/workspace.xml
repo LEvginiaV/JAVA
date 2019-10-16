@@ -105,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactAdressTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactCreationTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactAdressTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -145,12 +145,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GroupCreationTests.testBadGroupCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactEmailTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.GroupCreationTests.testBadGroupCreation&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactEmailTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -165,12 +165,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GroupDeletionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactPhoneTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.GroupDeletionTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactPhoneTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -233,10 +233,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
+        <item itemvalue="Gradle.ContactEmailTests" />
+        <item itemvalue="Gradle.ContactAdressTests" />
+        <item itemvalue="Gradle.ContactPhoneTests" />
         <item itemvalue="Gradle.ContactCreationTests.testBadContactCreation" />
-        <item itemvalue="Gradle.ContactCreationTests" />
-        <item itemvalue="Gradle.GroupCreationTests.testBadGroupCreation" />
-        <item itemvalue="Gradle.GroupDeletionTests" />
       </list>
     </recent_temporary>
   </component>

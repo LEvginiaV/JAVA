@@ -59,7 +59,7 @@ public class ContactHelper extends HelperBase {
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
-    type(By.name("address2"), contactData.getHomeAdress());
+    type(By.name("address2"), contactData.getHomeAddress());
     type(By.name("phone2"), contactData.getHomePhone2());
     type(By.name("notes"), contactData.getNotes());
   }
@@ -135,7 +135,11 @@ public class ContactHelper extends HelperBase {
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
       String firstName = element.findElement(By.xpath("td[3]")).getText();
       String lastName = element.findElement(By.xpath("td[2]")).getText();
-      contactCache.add(new ContactData().withId(id).withFirstName(firstName).withLastName(lastName));
+      String allPhones = element.findElement(By.xpath("td[6]")).getText();
+      String companyAddress = element.findElement(By.xpath("td[4]")).getText();
+      String allEmails = element.findElement(By.xpath("td[5]")).getText();
+      contactCache.add(new ContactData().withId(id).withFirstName(firstName).withLastName(lastName)
+              .withAllPhones(allPhones).withCompanyAddress(companyAddress).withAllEmails(allEmails));
     }
     return new Contacts(contactCache);
   }
@@ -151,8 +155,14 @@ public class ContactHelper extends HelperBase {
     String home = wd.findElement(By.name("home")).getAttribute("value");
     String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
     String work = wd.findElement(By.name("work")).getAttribute("value");
+    String phone2 = wd.findElement(By.name("phone2")).getAttribute("value");
+    String companyAddress = wd.findElement(By.name("address")).getAttribute("value");
+    String email = wd.findElement(By.name("email")).getAttribute("value");
+    String email2 = wd.findElement(By.name("email2")).getAttribute("value");
+    String email3 = wd.findElement(By.name("email3")).getAttribute("value");
     wd.navigate().back();
     return new ContactData().withId(contact.getId()).withFirstName(firstname).withLastName(lastname)
-            .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work);
+            .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work).withHomePhone2(phone2)
+            .withCompanyAddress(companyAddress).withEmail(email).withEmail2(email2).withEmail3(email3);
   }
 }
