@@ -92,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'ru.Lopatina.addressbook.tests'">
+  <component name="RunManager" selected="Gradle.ContactHomePageInfoTests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -125,12 +125,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactCreationTests.testBadContactCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactEmailTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactCreationTests.testBadContactCreation&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactEmailTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -145,12 +145,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactEmailTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactHomePageInfoTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactEmailTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactHomePageInfoTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -232,11 +232,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactHomePageInfoTests" />
+        <item itemvalue="Gradle.ContactPhoneTests" />
         <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
         <item itemvalue="Gradle.ContactEmailTests" />
         <item itemvalue="Gradle.ContactAdressTests" />
-        <item itemvalue="Gradle.ContactPhoneTests" />
-        <item itemvalue="Gradle.ContactCreationTests.testBadContactCreation" />
       </list>
     </recent_temporary>
   </component>
