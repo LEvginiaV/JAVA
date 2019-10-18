@@ -1,5 +1,6 @@
 package ru.Lopatina.addressbook.model;
 
+import java.io.File;
 import java.util.Objects;
 
 public class ContactData {
@@ -27,11 +28,21 @@ public class ContactData {
   private String aday;
   private String amonth;
   private String ayear;
-
   private String group = "test1";
   private String homeAddress;
   private String homePhone2;
   private String notes;
+
+  public File getPhoto() {
+    return photo;
+  }
+
+  public ContactData withPhoto(File photo) {
+    this.photo = photo;
+    return this;
+  }
+
+  private File photo;
 
   public String getAllPhones() {
     return allPhones;
