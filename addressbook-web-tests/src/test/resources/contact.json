@@ -52,32 +52,5 @@
     "homeAddress": "HomeAddress 2",
     "homePhone2": "111-22-22",
     "notes": "Notes 2"
-  },
-  {
-    "firstName": "FirstName 3",
-    "middleName": "MiddleName 3",
-    "lastName": "LastName 3",
-    "nickName": "NickName 3",
-    "position": "Position 3",
-    "company": "Company 3",
-    "companyAddress": "CompanyAddress 3",
-    "homePhone": "3-33-33",
-    "mobilePhone": "8-911-333-33-33",
-    "workPhone": "333-33-33",
-    "fax": "333-00-00",
-    "email": "Email1-3@mail.ru",
-    "email2": "Email2-3@bk.ru",
-    "email3": "Email3-3@gmail.ru",
-    "homepage": "vk3.com",
-    "bday": "3",
-    "bmonth": "March",
-    "byear": "1953",
-    "aday": "18",
-    "amonth": "June",
-    "ayear": "2003",
-    "group": "test1",
-    "homeAddress": "HomeAddress 3",
-    "homePhone2": "111-33-33",
-    "notes": "Notes 3"
   }
 ]
