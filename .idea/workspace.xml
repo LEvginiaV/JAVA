@@ -92,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ContactDataGenerator">
+  <component name="RunManager" selected="Gradle.ContactCreationTests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -102,7 +102,7 @@
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.Lopatina.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
-      <option name="PROGRAM_PARAMETERS" value="-c 5 -f src/test/resources/contact.xml -d xml" />
+      <option name="PROGRAM_PARAMETERS" value="-c 3 -f src/test/resources/contact.json -d json" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook-web-tests" />
       <extension name="coverage">
         <pattern>
@@ -230,9 +230,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactCreationTests" />
         <item itemvalue="Application.ContactDataGenerator" />
         <item itemvalue="Gradle.GroupCreationTests" />
-        <item itemvalue="Gradle.ContactCreationTests" />
         <item itemvalue="Application.GroupDataGenerator" />
         <item itemvalue="Gradle.ContactCreationTests.testCurrentDir" />
       </list>

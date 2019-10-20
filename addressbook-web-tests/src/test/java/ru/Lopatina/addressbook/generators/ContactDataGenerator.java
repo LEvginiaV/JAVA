@@ -70,12 +70,12 @@ public class ContactDataGenerator {
 
   private List<ContactData> generateContacts(int count) {
     List<ContactData> contacts = new ArrayList<ContactData>();
-    for (int i = 1; i < count; i++) {
+    for (int i = 1; i < count + 1; i++) {
       contacts.add(new ContactData().withFirstName(String.format("FirstName %s", i))
               .withMiddleName(String.format("MiddleName %s", i)).withLastName(String.format("LastName %s", i))
               .withNickName(String.format("NickName %s", i)).withPhoto(new File("src/test/resources/avatar.jpg"))
               .withPosition(String.format("Position %s", i)).withCompany(String.format("Company %s", i))
-              .withCompanyAddress(String.format("String.format(CompanyAddress %s", i))
+              .withCompanyAddress(String.format("CompanyAddress %s", i))
               .withHomePhone(String.format("%s-%s%s-%s%s", i, i, i, i, i))
               .withMobilePhone(String.format("8-911-%s%s%s-%s%s-%s%s", i, i, i, i, i, i, i))
               .withWorkPhone(String.format("%s%s%s-%s%s-%s%s", i, i, i, i, i, i, i))
@@ -85,7 +85,8 @@ public class ContactDataGenerator {
               .withHomepage(String.format("vk%s.com", i)).withBday(Integer.toString(i%28)).withBmonth("March")
               .withByear(Integer.toString(1950 + i%69)).withAday(Integer.toString((15 + i) % 28)).withAmonth("June")
               .withAyear(Integer.toString(2000 + i%20)).withGroup("test1").withHomeAddress(String.format("HomeAddress %s", i))
-              .withHomePhone2(String.format("111-%s%s-%s%s", i, i, i, i)).withPosition(String.format("Position %s", i)));
+              .withHomePhone2(String.format("111-%s%s-%s%s", i, i, i, i)).withPosition(String.format("Position %s", i))
+              .withNotes(String.format("Notes %s", i)));
     }
     return contacts;
   }
@@ -93,14 +94,14 @@ public class ContactDataGenerator {
   private void saveAsCsv(List<ContactData> contacts, File file) throws IOException {
     Writer writer = new FileWriter(file);
     for (ContactData contact : contacts) {
-      writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n",
+      writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n",
               contact.getFirstName(), contact.getMiddleName(), contact.getLastName(),
               contact.getNickName(), contact.getPhoto(), contact.getPosition(), contact.getCompany(),
               contact.getCompanyAddress(), contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(),
               contact.getFax(), contact.getEmail(), contact.getEmail(), contact.getEmail2(), contact.getEmail3(),
               contact.getHomepage(), contact.getBday(), contact.getBmonth(), contact.getByear(), contact.getAday(),
               contact.getAmonth(), contact.getAyear(), contact.getGroup(), contact.getHomeAddress(),
-              contact.getHomePhone2(), contact.getPosition()));
+              contact.getHomePhone2(), contact.getPosition(), contact.getNotes()));
     }
     writer.close();
   }

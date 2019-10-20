@@ -6,7 +6,7 @@
     <nickName>NickName 1</nickName>
     <position>Position 1</position>
     <company>Company 1</company>
-    <companyAddress>String.format(CompanyAddress 1</companyAddress>
+    <companyAddress>CompanyAddress 1</companyAddress>
     <homePhone>1-11-11</homePhone>
     <mobilePhone>8-911-111-11-11</mobilePhone>
     <workPhone>111-11-11</workPhone>
@@ -24,6 +24,7 @@
     <group>test1</group>
     <homeAddress>HomeAddress 1</homeAddress>
     <homePhone2>111-11-11</homePhone2>
+    <notes>Notes 1</notes>
     <photo>src\test\resources\avatar.jpg</photo>
   </contact>
   <contact>
@@ -33,7 +34,7 @@
     <nickName>NickName 2</nickName>
     <position>Position 2</position>
     <company>Company 2</company>
-    <companyAddress>String.format(CompanyAddress 2</companyAddress>
+    <companyAddress>CompanyAddress 2</companyAddress>
     <homePhone>2-22-22</homePhone>
     <mobilePhone>8-911-222-22-22</mobilePhone>
     <workPhone>222-22-22</workPhone>
@@ -51,60 +52,7 @@
     <group>test1</group>
     <homeAddress>HomeAddress 2</homeAddress>
     <homePhone2>111-22-22</homePhone2>
-    <photo>src\test\resources\avatar.jpg</photo>
-  </contact>
-  <contact>
-    <firstName>FirstName 3</firstName>
-    <middleName>MiddleName 3</middleName>
-    <lastName>LastName 3</lastName>
-    <nickName>NickName 3</nickName>
-    <position>Position 3</position>
-    <company>Company 3</company>
-    <companyAddress>String.format(CompanyAddress 3</companyAddress>
-    <homePhone>3-33-33</homePhone>
-    <mobilePhone>8-911-333-33-33</mobilePhone>
-    <workPhone>333-33-33</workPhone>
-    <fax>333-00-00</fax>
-    <email>Email1-3@mail.ru</email>
-    <email2>Email2-3@bk.ru</email2>
-    <email3>Email3-3@gmail.ru</email3>
-    <homepage>vk3.com</homepage>
-    <bday>3</bday>
-    <bmonth>March</bmonth>
-    <byear>1953</byear>
-    <aday>18</aday>
-    <amonth>June</amonth>
-    <ayear>2003</ayear>
-    <group>test1</group>
-    <homeAddress>HomeAddress 3</homeAddress>
-    <homePhone2>111-33-33</homePhone2>
-    <photo>src\test\resources\avatar.jpg</photo>
-  </contact>
-  <contact>
-    <firstName>FirstName 4</firstName>
-    <middleName>MiddleName 4</middleName>
-    <lastName>LastName 4</lastName>
-    <nickName>NickName 4</nickName>
-    <position>Position 4</position>
-    <company>Company 4</company>
-    <companyAddress>String.format(CompanyAddress 4</companyAddress>
-    <homePhone>4-44-44</homePhone>
-    <mobilePhone>8-911-444-44-44</mobilePhone>
-    <workPhone>444-44-44</workPhone>
-    <fax>444-00-00</fax>
-    <email>Email1-4@mail.ru</email>
-    <email2>Email2-4@bk.ru</email2>
-    <email3>Email3-4@gmail.ru</email3>
-    <homepage>vk4.com</homepage>
-    <bday>4</bday>
-    <bmonth>March</bmonth>
-    <byear>1954</byear>
-    <aday>19</aday>
-    <amonth>June</amonth>
-    <ayear>2004</ayear>
-    <group>test1</group>
-    <homeAddress>HomeAddress 4</homeAddress>
-    <homePhone2>111-44-44</homePhone2>
+    <notes>Notes 2</notes>
     <photo>src\test\resources\avatar.jpg</photo>
   </contact>
 </list>

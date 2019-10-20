@@ -1,15 +1,23 @@
 package ru.Lopatina.addressbook.tests;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.Lopatina.addressbook.model.ContactData;
 import ru.Lopatina.addressbook.model.Contacts;
+import ru.Lopatina.addressbook.model.GroupData;
 import ru.Lopatina.addressbook.model.TestBase;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
@@ -17,33 +25,35 @@ import static org.hamcrest.MatcherAssert.*;
 public class ContactCreationTests extends TestBase {
 
   @DataProvider
-  public Iterator<Object[]> validContacts() {
-    List<Object[]> list = new ArrayList<Object[]>();
-    list.add(new Object[] {new ContactData().withFirstName("Gheorghe").withMiddleName("Alan").withLastName("Smith")
-            .withNickName("Nicky").withPhoto(new File("src/test/resources/avatar.jpg")).withPosition("Tester")
-            .withCompany("Kontur").withCompanyAddress("Leninskiy avenu,168").withHomePhone("7-09-46")
-            .withMobilePhone("8-924-345-23-34").withWorkPhone("345-45-35").withFax("234-45-23").withEmail("Email1@mail.ru")
-            .withEmail2("Email2@bk.ru").withEmail3("Email3@gmail.ru").withHomepage("vk.com").withBday("12").withBmonth("March")
-            .withByear("1995").withAday("11").withAmonth("June").withAyear("2001").withGroup("test1")
-            .withHomeAddress("SPb, Nevsky avenu").withHomePhone2("345-56-34").withPosition("Fish seller")});
-    list.add(new Object[] {new ContactData().withFirstName("Gheorghe1").withMiddleName("Alan1").withLastName("Smith1")
-            .withNickName("Nicky1").withPhoto(new File("src/test/resources/avatar.jpg")).withPosition("Tester1")
-            .withCompany("Kontur1").withCompanyAddress("Leninskiy avenu,168").withHomePhone("7-09-46")
-            .withMobilePhone("8-924-345-23-34").withWorkPhone("345-45-35").withFax("234-45-23").withEmail("1Email1@mail.ru")
-            .withEmail2("1Email2@bk.ru").withEmail3("1Email3@gmail.ru").withHomepage("1vk.com").withBday("12").withBmonth("March")
-            .withByear("1995").withAday("11").withAmonth("June").withAyear("2001").withGroup("test1")
-            .withHomeAddress("1SPb, Nevsky avenu").withHomePhone2("345-56-34").withPosition("1Fish seller")});
-    list.add(new Object[] {new ContactData().withFirstName("Gheorghe2").withMiddleName("Alan2").withLastName("Smith2")
-            .withNickName("Nicky2").withPhoto(new File("src/test/resources/avatar.jpg")).withPosition("Tester2")
-            .withCompany("Kontur2").withCompanyAddress("Leninskiy avenu,168").withHomePhone("7-09-46")
-            .withMobilePhone("8-924-345-23-34").withWorkPhone("345-45-35").withFax("234-45-23").withEmail("Email1@mail.ru")
-            .withEmail2("2Email2@bk.ru").withEmail3("2Email3@gmail.ru").withHomepage("2vk.com").withBday("12").withBmonth("March")
-            .withByear("1995").withAday("11").withAmonth("June").withAyear("2001").withGroup("test1")
-            .withHomeAddress("2SPb, Nevsky avenu").withHomePhone2("345-56-34").withPosition("2Fish seller")});
-    return list.iterator();
+  public Iterator<Object[]> validContactsFromXml() throws IOException {
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contact.xml")));
+    String xml = "";
+    String line = reader.readLine();
+    while (line != null) {
+      xml += line;
+      line = reader.readLine();
+    }
+    XStream xstream = new XStream();
+    xstream.processAnnotations(ContactData.class);
+    List<ContactData> contacts = (List<ContactData>) xstream.fromXML(xml);
+    return contacts.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
   }
 
-  @Test(dataProvider = "validContacts")
+  @DataProvider
+  public Iterator<Object[]> validContactsFromJson() throws IOException {
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contact.json")));
+    String json = "";
+    String line = reader.readLine();
+    while (line != null) {
+      json += line;
+      line = reader.readLine();
+    }
+    Gson gson = new Gson();
+    List<ContactData> contacts = gson.fromJson(json, new TypeToken<List<ContactData>>(){}.getType());
+    return contacts.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
+  }
+
+  @Test(dataProvider = "validContactsFromJson")
   public void testContactCreation(ContactData contact) throws Exception {
     Contacts before = app.contact().all();
     app.contact().create(contact, true);

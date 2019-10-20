@@ -6,7 +6,7 @@
     "nickName": "NickName 1",
     "position": "Position 1",
     "company": "Company 1",
-    "companyAddress": "String.format(CompanyAddress 1",
+    "companyAddress": "CompanyAddress 1",
     "homePhone": "1-11-11",
     "mobilePhone": "8-911-111-11-11",
     "workPhone": "111-11-11",
@@ -23,7 +23,8 @@
     "ayear": "2001",
     "group": "test1",
     "homeAddress": "HomeAddress 1",
-    "homePhone2": "111-11-11"
+    "homePhone2": "111-11-11",
+    "notes": "Notes 1"
   },
   {
     "firstName": "FirstName 2",
@@ -32,7 +33,7 @@
     "nickName": "NickName 2",
     "position": "Position 2",
     "company": "Company 2",
-    "companyAddress": "String.format(CompanyAddress 2",
+    "companyAddress": "CompanyAddress 2",
     "homePhone": "2-22-22",
     "mobilePhone": "8-911-222-22-22",
     "workPhone": "222-22-22",
@@ -49,7 +50,8 @@
     "ayear": "2002",
     "group": "test1",
     "homeAddress": "HomeAddress 2",
-    "homePhone2": "111-22-22"
+    "homePhone2": "111-22-22",
+    "notes": "Notes 2"
   },
   {
     "firstName": "FirstName 3",
@@ -58,7 +60,7 @@
     "nickName": "NickName 3",
     "position": "Position 3",
     "company": "Company 3",
-    "companyAddress": "String.format(CompanyAddress 3",
+    "companyAddress": "CompanyAddress 3",
     "homePhone": "3-33-33",
     "mobilePhone": "8-911-333-33-33",
     "workPhone": "333-33-33",
@@ -75,32 +77,7 @@
     "ayear": "2003",
     "group": "test1",
     "homeAddress": "HomeAddress 3",
-    "homePhone2": "111-33-33"
-  },
-  {
-    "firstName": "FirstName 4",
-    "middleName": "MiddleName 4",
-    "lastName": "LastName 4",
-    "nickName": "NickName 4",
-    "position": "Position 4",
-    "company": "Company 4",
-    "companyAddress": "String.format(CompanyAddress 4",
-    "homePhone": "4-44-44",
-    "mobilePhone": "8-911-444-44-44",
-    "workPhone": "444-44-44",
-    "fax": "444-00-00",
-    "email": "Email1-4@mail.ru",
-    "email2": "Email2-4@bk.ru",
-    "email3": "Email3-4@gmail.ru",
-    "homepage": "vk4.com",
-    "bday": "4",
-    "bmonth": "March",
-    "byear": "1954",
-    "aday": "19",
-    "amonth": "June",
-    "ayear": "2004",
-    "group": "test1",
-    "homeAddress": "HomeAddress 4",
-    "homePhone2": "111-44-44"
+    "homePhone2": "111-33-33",
+    "notes": "Notes 3"
   }
 ]
