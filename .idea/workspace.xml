@@ -69,18 +69,18 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+      <recent name="ru.Lopatina.addressbook" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.sandbox" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.addressbook.appmanager" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.Lopatina.addressbook.appmanager" />
-      <recent name="ru.Lopatina.addressbook" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -95,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactCreationTests.testContactCreation">
+  <component name="RunManager" selected="Gradle.DbConnectionTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -128,12 +128,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactModificationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactModificationTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.DbConnectionTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -268,19 +268,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.ContactCreationTests" />
-      <item itemvalue="Gradle.ContactModificationTests" />
       <item itemvalue="Gradle.GroupDeletionTests" />
       <item itemvalue="Gradle.GroupCreationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
       <item itemvalue="TestNG.C:/workspace/JAVA_lessons/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
+      <item itemvalue="Gradle.DbConnectionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DbConnectionTest" />
+        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="TestNG.C:/workspace/JAVA_lessons/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
         <item itemvalue="Gradle.ContactCreationTests" />
-        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupDeletionTests" />
-        <item itemvalue="Gradle.ContactModificationTests" />
       </list>
     </recent_temporary>
   </component>
