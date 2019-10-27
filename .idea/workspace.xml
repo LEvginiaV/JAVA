@@ -95,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.DbConnectionTest">
+  <component name="RunManager" selected="Gradle.HbConnectionTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -168,12 +168,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GroupDeletionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.GroupDeletionTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.HbConnectionTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -268,19 +268,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.ContactCreationTests" />
-      <item itemvalue="Gradle.GroupDeletionTests" />
       <item itemvalue="Gradle.GroupCreationTests" />
+      <item itemvalue="Gradle.DbConnectionTest" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
       <item itemvalue="TestNG.C:/workspace/JAVA_lessons/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
-      <item itemvalue="Gradle.DbConnectionTest" />
+      <item itemvalue="Gradle.HbConnectionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HbConnectionTest" />
         <item itemvalue="Gradle.DbConnectionTest" />
         <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="TestNG.C:/workspace/JAVA_lessons/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
         <item itemvalue="Gradle.ContactCreationTests" />
-        <item itemvalue="Gradle.GroupDeletionTests" />
       </list>
     </recent_temporary>
   </component>
