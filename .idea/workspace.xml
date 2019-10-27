@@ -95,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.HbConnectionTest">
+  <component name="RunManager" selected="Gradle.Tests in 'ru.Lopatina.addressbook.tests'">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -128,12 +128,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactDeletionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.DbConnectionTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactDeletionTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -148,12 +148,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactModificationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.GroupCreationTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactModificationTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -168,12 +168,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="HbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GroupDeletionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.HbConnectionTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.GroupDeletionTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'ru.Lopatina.addressbook.tests'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.*&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -191,27 +211,6 @@
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="C:/workspace/JAVA_lessons/addressbook-web-tests/src/test/resources/testng-contacts.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -267,20 +266,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.ContactCreationTests" />
-      <item itemvalue="Gradle.GroupCreationTests" />
-      <item itemvalue="Gradle.DbConnectionTest" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
-      <item itemvalue="TestNG.C:/workspace/JAVA_lessons/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
-      <item itemvalue="Gradle.HbConnectionTest" />
+      <item itemvalue="Gradle.ContactCreationTests" />
+      <item itemvalue="Gradle.ContactModificationTests" />
+      <item itemvalue="Gradle.GroupDeletionTests" />
+      <item itemvalue="Gradle.ContactDeletionTests" />
+      <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.HbConnectionTest" />
-        <item itemvalue="Gradle.DbConnectionTest" />
-        <item itemvalue="Gradle.GroupCreationTests" />
-        <item itemvalue="TestNG.C:/workspace/JAVA_lessons/addressbook-web-tests/src/test/resources/testng-contacts.xml" />
+        <item itemvalue="Gradle.Tests in 'ru.Lopatina.addressbook.tests'" />
+        <item itemvalue="Gradle.ContactDeletionTests" />
         <item itemvalue="Gradle.ContactCreationTests" />
+        <item itemvalue="Gradle.ContactModificationTests" />
+        <item itemvalue="Gradle.GroupDeletionTests" />
       </list>
     </recent_temporary>
   </component>

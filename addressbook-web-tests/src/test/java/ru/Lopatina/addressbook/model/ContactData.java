@@ -3,79 +3,193 @@ package ru.Lopatina.addressbook.model;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
 
 @XStreamAlias("contact")
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
   @XStreamOmitField
+  @Id
+  @Column(name = "id")
   private int id = Integer.MAX_VALUE;
+
   @Expose
+  @Column(name = "firstname")
   private String firstName;
+
   @Expose
+  @Column(name = "middlename")
   private String middleName;
+
   @Expose
+  @Column(name = "lastname")
   private String lastName;
+
   @Expose
+  @Column(name = "nickname")
   private String nickName;
+
   @Expose
+  @Column(name = "title")
   private String position;
+
   @Expose
+  @Column(name = "company")
   private String company;
+
   @Expose
+  @Column(name = "address")
+  @Type(type = "text")
   private String companyAddress;
+
   @Expose
+  @Column(name = "home")
+  @Type(type = "text")
   private String homePhone;
+
   @Expose
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobilePhone;
+
   @Expose
+  @Column(name = "work")
+  @Type(type = "text")
   private String workPhone;
+
   @Expose
+  @Transient
   private String allPhones;
+
   @Expose
+  @Column(name = "fax")
+  @Type(type = "text")
   private String fax;
+
   @Expose
+  @Column(name = "email")
+  @Type(type = "text")
   private String email;
+
   @Expose
+  @Column(name = "email2")
+  @Type(type = "text")
   private String email2;
+
   @Expose
+  @Column(name = "email3")
+  @Type(type = "text")
   private String email3;
+
   @Expose
+  @Transient
   private String allEmails;
+
   @Expose
+  @Column(name = "homepage")
+  @Type(type = "text")
   private String homepage;
+
   @Expose
+  @Transient
   private String bday;
+
   @Expose
+  @Column(name = "bmonth")
   private String bmonth;
+
   @Expose
+  @Column(name = "byear")
   private String byear;
+
   @Expose
+  @Transient
   private String aday;
+
   @Expose
+  @Column(name = "amonth")
   private String amonth;
+
   @Expose
+  @Column(name = "ayear")
   private String ayear;
+
   @Expose
+  @Transient
   private String group = "test1";
+
   @Expose
+  @Column(name = "address2")
+  @Type(type = "text")
   private String homeAddress;
+
   @Expose
+  @Column(name = "phone2")
+  @Type(type = "text")
   private String homePhone2;
+
   @Expose
+  @Column(name = "notes")
+  @Type(type = "text")
   private String notes;
 
+  @Expose
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
+
+  @Override
+  public String toString() {
+    return "ContactData{" +
+            "id=" + id +
+            ", firstName='" + firstName + '\'' +
+            ", middleName='" + middleName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", nickName='" + nickName + '\'' +
+            ", position='" + position + '\'' +
+            ", company='" + company + '\'' +
+            ", companyAddress='" + companyAddress + '\'' +
+            ", homePhone='" + homePhone + '\'' +
+            ", mobilePhone='" + mobilePhone + '\'' +
+            ", workPhone='" + workPhone + '\'' +
+            ", allPhones='" + allPhones + '\'' +
+            ", fax='" + fax + '\'' +
+            ", email='" + email + '\'' +
+            ", email2='" + email2 + '\'' +
+            ", email3='" + email3 + '\'' +
+            ", allEmails='" + allEmails + '\'' +
+            ", homepage='" + homepage + '\'' +
+            ", bday='" + bday + '\'' +
+            ", bmonth='" + bmonth + '\'' +
+            ", byear='" + byear + '\'' +
+            ", aday='" + aday + '\'' +
+            ", amonth='" + amonth + '\'' +
+            ", ayear='" + ayear + '\'' +
+            ", group='" + group + '\'' +
+            ", homeAddress='" + homeAddress + '\'' +
+            ", homePhone2='" + homePhone2 + '\'' +
+            ", notes='" + notes + '\'' +
+            ", photo='" + photo + '\'' +
+            '}';
+  }
+
   public File getPhoto() {
-    return photo;
+    if (photo== null) {
+      return null;
+    } else {
+      return new File(photo);
+    }
   }
 
   public ContactData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
-
-  private File photo;
 
   public String getAllPhones() {
     return allPhones;
@@ -330,27 +444,35 @@ public class ContactData {
   }
 
   @Override
-  public String toString() {
-    return "ContactData{" +
-            "id=" + id +
-            ", firstName='" + firstName + '\'' +
-            ", lastName='" + lastName + '\'' +
-            '}';
-  }
-
-  @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     ContactData that = (ContactData) o;
     return id == that.id &&
             Objects.equals(firstName, that.firstName) &&
-            Objects.equals(lastName, that.lastName);
+            Objects.equals(middleName, that.middleName) &&
+            Objects.equals(lastName, that.lastName) &&
+            Objects.equals(nickName, that.nickName) &&
+            Objects.equals(position, that.position) &&
+            Objects.equals(company, that.company) &&
+            Objects.equals(companyAddress, that.companyAddress) &&
+            Objects.equals(homePhone, that.homePhone) &&
+            Objects.equals(mobilePhone, that.mobilePhone) &&
+            Objects.equals(workPhone, that.workPhone) &&
+            Objects.equals(fax, that.fax) &&
+            Objects.equals(email, that.email) &&
+            Objects.equals(email2, that.email2) &&
+            Objects.equals(email3, that.email3) &&
+            Objects.equals(homepage, that.homepage) &&
+            Objects.equals(byear, that.byear) &&
+            Objects.equals(ayear, that.ayear) &&
+            Objects.equals(homeAddress, that.homeAddress) &&
+            Objects.equals(homePhone2, that.homePhone2) &&
+            Objects.equals(notes, that.notes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstName, lastName);
+    return Objects.hash(id, firstName, middleName, lastName, nickName, position, company, companyAddress, homePhone, mobilePhone, workPhone, fax, email, email2, email3, homepage, byear, ayear, homeAddress, homePhone2, notes);
   }
-
 }
