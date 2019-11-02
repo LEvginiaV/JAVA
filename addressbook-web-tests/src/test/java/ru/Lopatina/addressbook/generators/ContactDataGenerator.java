@@ -82,8 +82,8 @@ public class ContactDataGenerator {
               .withFax(String.format("%s%s%s-00-00", i, i, i))
               .withEmail(String.format("Email1-%s@mail.ru", i))
               .withEmail2(String.format("Email2-%s@bk.ru", i)).withEmail3(String.format("Email3-%s@gmail.ru", i))
-              .withHomepage(String.format("vk%s.com", i)).withBday(Integer.toString(i%28)).withBmonth("March")
-              .withByear(Integer.toString(1950 + i%69)).withAday(Integer.toString((15 + i) % 28)).withAmonth("June")
+              .withHomepage(String.format("vk%s.com", i)).withBday(i%28).withBmonth("March")
+              .withByear(Integer.toString(1950 + i%69)).withAday((15 + i) % 28).withAmonth("June")
               .withAyear(Integer.toString(2000 + i%20)).withGroup("test1").withHomeAddress(String.format("HomeAddress %s", i))
               .withHomePhone2(String.format("111-%s%s-%s%s", i, i, i, i)).withPosition(String.format("Position %s", i))
               .withNotes(String.format("Notes %s", i)));

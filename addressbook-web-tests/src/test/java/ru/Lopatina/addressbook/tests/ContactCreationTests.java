@@ -78,7 +78,7 @@ public class ContactCreationTests extends TestBase {
   public void testBadContactCreation() throws Exception {
     Contacts before = app.db().contacts();
     ContactData contact = new ContactData().withFirstName("Gho'").withMiddleName("Alan").withLastName("Smith").withNickName(
-            "Nicky").withBday("12").withBmonth("March").withByear("1995").withAday("11").withAmonth(
+            "Nicky").withBday(12).withBmonth("March").withByear("1995").withAday(11).withAmonth(
             "June").withAyear("2001").withGroup("test1");
     app.contact().create(contact, true);
     assertThat(app.contact().count(), equalTo(before.size()));

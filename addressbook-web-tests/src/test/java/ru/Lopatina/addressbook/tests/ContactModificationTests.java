@@ -29,8 +29,8 @@ public class ContactModificationTests extends TestBase {
             .withLastName("Smith").withNickName("Sinus").withCompany("Sbis").withPosition("Killer")
             .withCompanyAddress("Leninskiy avenu,168").withHomePhone("7-09-46").withMobilePhone("8-924-345-23-34")
             .withWorkPhone("345-45-35").withFax("234-45-23").withEmail("Email1@mail.ru").withEmail2("eeeee")
-            .withEmail3("ieeeeee").withHomepage("localhost").withBday("15").withBmonth("March").withByear("1995")
-            .withAday("21").withAmonth("June").withAyear("2001").withHomeAddress("Rostov").withHomePhone2("5-48-54")
+            .withEmail3("ieeeeee").withHomepage("localhost").withBday(15).withBmonth("March").withByear("1995")
+            .withAday(21).withAmonth("June").withAyear("2001").withHomeAddress("Rostov").withHomePhone2("5-48-54")
             .withNotes("blablabla");
     app.contact().modify(contact);
     assertThat(app.contact().count(), equalTo(before.size()));
