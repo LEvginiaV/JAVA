@@ -84,7 +84,7 @@ public class ContactDataGenerator {
               .withEmail2(String.format("Email2-%s@bk.ru", i)).withEmail3(String.format("Email3-%s@gmail.ru", i))
               .withHomepage(String.format("vk%s.com", i)).withBday(i%28).withBmonth("March")
               .withByear(Integer.toString(1950 + i%69)).withAday((15 + i) % 28).withAmonth("June")
-              .withAyear(Integer.toString(2000 + i%20)).withGroup("test1").withHomeAddress(String.format("HomeAddress %s", i))
+              .withAyear(Integer.toString(2000 + i%20)).withHomeAddress(String.format("HomeAddress %s", i))
               .withHomePhone2(String.format("111-%s%s-%s%s", i, i, i, i)).withPosition(String.format("Position %s", i))
               .withNotes(String.format("Notes %s", i)));
     }
@@ -94,13 +94,13 @@ public class ContactDataGenerator {
   private void saveAsCsv(List<ContactData> contacts, File file) throws IOException {
     try (Writer writer = new FileWriter(file)) {
       for (ContactData contact : contacts) {
-        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n",
+        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n",
                 contact.getFirstName(), contact.getMiddleName(), contact.getLastName(),
                 contact.getNickName(), contact.getPhoto(), contact.getPosition(), contact.getCompany(),
                 contact.getCompanyAddress(), contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(),
                 contact.getFax(), contact.getEmail(), contact.getEmail(), contact.getEmail2(), contact.getEmail3(),
                 contact.getHomepage(), contact.getBday(), contact.getBmonth(), contact.getByear(), contact.getAday(),
-                contact.getAmonth(), contact.getAyear(), contact.getGroup(), contact.getHomeAddress(),
+                contact.getAmonth(), contact.getAyear(), contact.getHomeAddress(),
                 contact.getHomePhone2(), contact.getPosition(), contact.getNotes()));
       }
     }

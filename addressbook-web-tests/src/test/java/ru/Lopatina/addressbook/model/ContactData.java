@@ -7,7 +7,9 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.File;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @XStreamAlias("contact")
 @Entity
@@ -119,9 +121,10 @@ public class ContactData {
   @Column(name = "ayear")
   private String ayear;
 
-  @Expose
-  @Transient
-  private String group = "test1";
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(name = "address_in_groups",
+          joinColumns = @JoinColumn (name = "id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
+  private Set<GroupData> groups = new HashSet<GroupData>();
 
   @Expose
   @Column(name = "address2")
@@ -170,7 +173,7 @@ public class ContactData {
             ", aday=" + aday +
             ", amonth='" + amonth + '\'' +
             ", ayear='" + ayear + '\'' +
-            ", group='" + group + '\'' +
+            ", groups=" + groups +
             ", homeAddress='" + homeAddress + '\'' +
             ", homePhone2='" + homePhone2 + '\'' +
             ", notes='" + notes + '\'' +
@@ -319,11 +322,6 @@ public class ContactData {
     return this;
   }
 
-  public ContactData withGroup(String group) {
-    this.group = group;
-    return this;
-  }
-
   public ContactData withHomeAddress(String homeAddress) {
     this.homeAddress = homeAddress;
     return this;
@@ -442,7 +440,6 @@ public class ContactData {
             Objects.equals(byear, that.byear) &&
             Objects.equals(aday, that.aday) &&
             Objects.equals(ayear, that.ayear) &&
-            Objects.equals(group, that.group) &&
             Objects.equals(homeAddress, that.homeAddress) &&
             Objects.equals(homePhone2, that.homePhone2) &&
             Objects.equals(notes, that.notes);
@@ -450,7 +447,7 @@ public class ContactData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstName, middleName, lastName, nickName, position, company, companyAddress, homePhone, mobilePhone, workPhone, allPhones, fax, email, email2, email3, allEmails, homepage, bday, byear, aday, ayear, group, homeAddress, homePhone2, notes);
+    return Objects.hash(id, firstName, middleName, lastName, nickName, position, company, companyAddress, homePhone, mobilePhone, workPhone, allPhones, fax, email, email2, email3, allEmails, homepage, bday, byear, aday, ayear, homeAddress, homePhone2, notes);
   }
 
   public String getAday() {
@@ -465,8 +462,8 @@ public class ContactData {
     return ayear;
   }
 
-  public String getGroup() {
-    return group;
+  public Groups getGroups() {
+    return new Groups(groups);
   }
 
   public String getHomeAddress() {
@@ -481,4 +478,8 @@ public class ContactData {
     return notes;
   }
 
+  public ContactData inGroup(GroupData group) {
+    groups.add(group);
+    return this;
+  }
 }

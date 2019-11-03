@@ -5,9 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import ru.Lopatina.addressbook.model.ContactData;
-import ru.Lopatina.addressbook.model.Contacts;
-import ru.Lopatina.addressbook.model.TestBase;
+import ru.Lopatina.addressbook.model.*;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -55,9 +53,14 @@ public class ContactCreationTests extends TestBase {
 
   @Test(dataProvider = "validContactsFromJson")
   public void testContactCreation(ContactData contact) throws Exception {
+    if (app.db().groups().size() == 0) {
+      app.group().create(new GroupData().withName("test1"));
+    }
+    Groups groups = app.db().groups();
+    ContactData newContact = contact.inGroup(groups.iterator().next());
     app.goTo().homePage();
     Contacts before = app.db().contacts();
-    app.contact().create(contact, true);
+    app.contact().create(newContact, true);
     Contacts after = app.db().contacts();
     assertThat(after.size(), equalTo(before.size() + 1));
 
@@ -76,10 +79,14 @@ public class ContactCreationTests extends TestBase {
 
   @Test(enabled = false)
   public void testBadContactCreation() throws Exception {
+    if (app.db().groups().size() == 0) {
+      app.group().create(new GroupData().withName("test1"));
+    }
+    Groups groups = app.db().groups();
     Contacts before = app.db().contacts();
     ContactData contact = new ContactData().withFirstName("Gho'").withMiddleName("Alan").withLastName("Smith").withNickName(
             "Nicky").withBday(12).withBmonth("March").withByear("1995").withAday(11).withAmonth(
-            "June").withAyear("2001").withGroup("test1");
+            "June").withAyear("2001").inGroup(groups.iterator().next());
     app.contact().create(contact, true);
     assertThat(app.contact().count(), equalTo(before.size()));
     Contacts after = app.db().contacts();
