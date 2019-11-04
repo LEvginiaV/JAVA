@@ -27,12 +27,22 @@ public class DbHelper {
   public Groups groups() {
     Session session = sessionFactory.openSession();
     session.beginTransaction();
-    List<GroupData> result = session.createQuery("from GroupData").list();
+    List<GroupData> result = session.createQuery("from GroupData where deprecated = '0000-00-00'").list();
     session.getTransaction().commit();
     session.close();
     return new Groups(result);
   }
-
+/*
+  public GroupData groupById(int id) {
+    Session session = sessionFactory.openSession();
+    session.beginTransaction();
+    List<GroupData> result = session.createQuery("from GroupData where deprecated = '0000-00-00' and id = '" + id + "'").list();
+    GroupData test = result.iterator().next();
+    session.getTransaction().commit();
+    session.close();
+    return test;
+  }
+*/
   public Contacts contacts() {
     Session session = sessionFactory.openSession();
     session.beginTransaction();
