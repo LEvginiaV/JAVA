@@ -12,6 +12,9 @@
     <projectState path="$PROJECT_DIR$/addressbook-web-tests">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/mantis-tests">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/sandbox">
       <ProjectState />
     </projectState>
@@ -25,12 +28,29 @@
         <task path="$PROJECT_DIR$/addressbook-web-tests">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/mantis-tests">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="addressbook-web-tests" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mantis-tests" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mantis-tests" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mantis-tests" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -58,25 +78,28 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mantis-tests/src/test/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15820312" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.Lopatina.addressbook.appmanager" />
-      <recent name="ru.Lopatina.addressbook" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.sandbox" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
+      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.Lopatina.mantis.appmanager" />
+      <recent name="ru.Lopatina.mantis.tests" />
       <recent name="ru.Lopatina.addressbook.appmanager" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+      <recent name="ru.Lopatina.addressbook" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -91,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ContactAdditionToGroup">
+  <component name="RunManager" selected="Gradle.ContactDeletionFromGroup">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -340,8 +363,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ContactAdditionToGroup" />
         <item itemvalue="Gradle.ContactDeletionFromGroup" />
+        <item itemvalue="Gradle.ContactAdditionToGroup" />
         <item itemvalue="Gradle.ContactHomePageInfoTests" />
         <item itemvalue="Gradle.HbConnectionTest" />
         <item itemvalue="Gradle.ContactCreationTests" />
