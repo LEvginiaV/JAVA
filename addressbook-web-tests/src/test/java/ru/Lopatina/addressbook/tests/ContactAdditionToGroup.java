@@ -21,23 +21,16 @@ public class ContactAdditionToGroup extends TestBase {
   public void testContactAdditionToGroup() {
     Contacts contacts = app.db().contacts();
     Groups groups = app.db().groups();
-    ContactData addedContact = contacts.stream().filter((s) -> (s.getGroups().size() < groups.size())).findAny().get();
+    if (!contacts.stream().filter((s) -> (s.getGroups().size() < groups.size())).findAny().isPresent()) {
+      app.contact().create(new ContactData().withFirstName("Igor").withLastName("Ivanov").withBday(15).withBmonth("March").withByear("1995")
+              .withAday(21).withAmonth("June").withAyear("2001"), true);
+    }
+    ContactData addedContact =
+            app.db().contacts().stream().filter((s) -> (s.getGroups().size() < groups.size())).findAny().get();
     Groups before = addedContact.getGroups();
     GroupData group = groups.without(addedContact.getGroups()).iterator().next();
     app.contact().addToGroup(addedContact, group);
     Groups after = app.db().contacts().stream().filter((s) -> s.equals(addedContact)).findFirst().get().getGroups();
     assertThat(after, equalTo(before.withAdded(group)));
-
-    /*GroupData modifiedGroup = groups.iterator().next();
-    if (modifiedGroup.getContacts().size() == 0) {
-      app.contact().create(new ContactData().withFirstName("Gheorghe6").withMiddleName("Mi")
-              .withLastName("Smith").withNickName("Sinus").withCompany("Sbis").withPosition("Killer")
-              .withCompanyAddress("Leninskiy avenu,168").withHomePhone("7-09-46").withMobilePhone("8-924-345-23-34")
-              .withWorkPhone("345-45-35").withFax("234-45-23").withEmail("Email1@mail.ru").withEmail2("eeeee")
-              .withEmail3("ieeeeee").withHomepage("localhost").withBday(15).withBmonth("March").withByear("1995")
-              .withAday(21).withAmonth("June").withAyear("2001").withHomeAddress("Rostov").withHomePhone2("5-48-54")
-              .withNotes("blablabla").inGroup(modifiedGroup), true);
-    }
-*/
   }
 }

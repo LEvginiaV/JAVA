@@ -100,6 +100,16 @@ public class ContactHelper extends HelperBase {
     returnToHomePage();
   }
 
+  public ContactData createAndReturn(ContactData contact, boolean creation) {
+    initContactCreation();
+    fillContactForms(contact, creation);
+    // app.getContactHelper().chooseAvatar("\\img\\i380664.jpg");
+    submitContactCreation();
+    contactCache = null;
+    returnToHomePage();
+    return contact;
+  }
+
   public void modify(ContactData contact) {
     selectContactById(contact.getId());
     initContactModificationById(contact.getId());
