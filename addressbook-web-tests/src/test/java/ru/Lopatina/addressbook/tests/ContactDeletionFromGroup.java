@@ -14,32 +14,33 @@ public class ContactDeletionFromGroup extends TestBase {
 
   @BeforeMethod
   public void  ensurePreconditions() {
-    app.goTo().homePage();
     if (app.db().groups().size() == 0) {
+      app.goTo().GroupPage();
       app.group().create(new GroupData().withName("test1"));
     }
+    if (app.db().contacts().size() == 0) {
+      app.goTo().homePage();
+      GroupData newGroup = app.db().groups().iterator().next();
+      app.contact().create(new ContactData().withFirstName("Gheorghe").withLastName("Smith").withCompanyAddress(
+              "Leninskiy avenu,168").withHomePhone("7-09-46").withMobilePhone("8-924-345-23-34").withWorkPhone(
+              "345-45-35").withFax("234-45-23").withEmail("Email1@mail.ru").withBday(15).withBmonth("March").withByear("1995")
+              .withAday(21).withAmonth("June").withAyear("2001").inGroup(newGroup), true);
+    }
+    app.goTo().homePage();
   }
 
   @Test
   public void testContactDeletionFromGroup() {
+    Contacts contacts = app.db().contacts();
     Groups groups = app.db().groups();
-    GroupData modifiedGroup = groups.iterator().next();
-    if (modifiedGroup.getContacts().size() == 0) {
-      app.contact().create(new ContactData().withFirstName("Gheorghe6").withMiddleName("Mi")
-              .withLastName("Smith").withNickName("Sinus").withCompany("Sbis").withPosition("Killer")
-              .withCompanyAddress("Leninskiy avenu,168").withHomePhone("7-09-46").withMobilePhone("8-924-345-23-34")
-              .withWorkPhone("345-45-35").withFax("234-45-23").withEmail("Email1@mail.ru").withEmail2("eeeee")
-              .withEmail3("ieeeeee").withHomepage("localhost").withBday(15).withBmonth("March").withByear("1995")
-              .withAday(21).withAmonth("June").withAyear("2001").withHomeAddress("Rostov").withHomePhone2("5-48-54")
-              .withNotes("blablabla").inGroup(modifiedGroup), true);
+    if (!contacts.stream().filter((s) -> (s.getGroups().size() > 0)).findAny().isPresent()) {
+      app.contact().addToGroup(contacts.iterator().next(), groups.iterator().next());
     }
-    GroupData modifiedGroup2 = app.db().groups().stream().filter((s) -> s.equals(modifiedGroup)).findFirst().get();
-    Contacts before = modifiedGroup2.getContacts();
-    ContactData deletedContact = modifiedGroup2.getContacts().iterator().next();
-    app.contact().deleteFromGroup(modifiedGroup2, deletedContact);
-
-    assertThat(app.contact().count(), equalTo(before.size() - 1));
-    Contacts after = app.db().groups().stream().filter((s) -> s.equals(modifiedGroup)).findFirst().get().getContacts();;
-    assertThat(after, equalTo(before.without(deletedContact)));
+    ContactData removedContact = app.db().contacts().stream().filter((s) -> (s.getGroups().size() > 0)).findAny().get();
+    Groups before = removedContact.getGroups();
+    GroupData modifiedGroup = before.iterator().next();
+    app.contact().deleteFromGroup(modifiedGroup, removedContact);
+    Groups after = app.db().contacts().stream().filter((s) -> s.equals(removedContact)).findFirst().get().getGroups();;
+    assertThat(after, equalTo(before.without(modifiedGroup)));
   }
 }

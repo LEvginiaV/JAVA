@@ -114,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ContactDeletionFromGroup">
+  <component name="RunManager" selected="Gradle.ContactAdditionToGroup">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -355,16 +355,16 @@
       <item itemvalue="Gradle.ContactDeletionFromGroup" />
       <item itemvalue="Gradle.HbConnectionTest" />
       <item itemvalue="Gradle.ContactCreationTests" />
+      <item itemvalue="Gradle.ContactAdditionToGroup" />
       <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
-      <item itemvalue="Gradle.ContactAdditionToGroup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ContactDeletionFromGroup" />
         <item itemvalue="Gradle.ContactAdditionToGroup" />
+        <item itemvalue="Gradle.ContactDeletionFromGroup" />
         <item itemvalue="Gradle.ContactHomePageInfoTests" />
         <item itemvalue="Gradle.HbConnectionTest" />
         <item itemvalue="Gradle.ContactCreationTests" />
@@ -403,6 +403,15 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/Lopatina/addressbook/appmanager/ContactHelper.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
         <watch expression="before.get(1)" />
