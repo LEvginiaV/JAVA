@@ -85,22 +85,22 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.Lopatina.mantis.appmanager" />
-      <recent name="ru.Lopatina.addressbook.appmanager" />
-      <recent name="ru.Lopatina.addressbook" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.sandbox" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
+      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.mantis.appmanager" />
       <recent name="ru.Lopatina.mantis.tests" />
       <recent name="ru.Lopatina.addressbook.appmanager" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
-      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.Lopatina.mantis.appmanager" />
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+      <recent name="ru.Lopatina.addressbook" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,12 +377,12 @@
       <item itemvalue="Gradle.ContactDeletionFromGroup" />
       <item itemvalue="Gradle.ContactAdditionToGroup" />
       <item itemvalue="Gradle.LoginTests" />
+      <item itemvalue="Gradle.RegistrationTests" />
       <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
-      <item itemvalue="Gradle.RegistrationTests" />
     </list>
     <recent_temporary>
       <list>
@@ -432,21 +432,6 @@
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/Lopatina/addressbook/appmanager/ContactHelper.java</url>
           <line>200</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/Lopatina/mantis/appmanager/FtpHelper.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/Lopatina/mantis/appmanager/FtpHelper.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/Lopatina/mantis/tests/RegistrationTests.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
