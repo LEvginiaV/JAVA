@@ -22,4 +22,12 @@ public class RegistrationHelper extends HelperBase {
     type(By.name("password_confirm"), password);
     click(By.cssSelector("button[type='submit']"));
   }
+
+  public void login(String username, String password) {
+    wd.get(app.getProperty("web.baseUrl") + "/login_page.php");
+    type(By.name("username"), username);
+    click(By.cssSelector("input[value='Login']"));
+    type(By.name("password"), password);
+    click(By.cssSelector("input[value='Login']"));
+  }
 }

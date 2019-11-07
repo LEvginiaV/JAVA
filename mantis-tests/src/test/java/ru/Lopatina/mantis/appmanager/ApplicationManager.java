@@ -19,6 +19,7 @@ public class ApplicationManager {
 
   private String browser;
   private RegistrationHelper registrationHelper;
+  private EditHelper editHelper;
   private FtpHelper ftp;
   private MailHelper mailHelper;
 
@@ -44,6 +45,13 @@ public class ApplicationManager {
 
   public String getProperty(String key) {
     return properties.getProperty(key);
+  }
+
+  public EditHelper edit() {
+    if (editHelper == null) {
+      editHelper = new EditHelper(this);
+    }
+    return editHelper;
   }
 
   public RegistrationHelper registration() {
