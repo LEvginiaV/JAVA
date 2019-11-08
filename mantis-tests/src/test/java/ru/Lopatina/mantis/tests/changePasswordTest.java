@@ -4,6 +4,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.Lopatina.mantis.model.MailMessage;
+import ru.Lopatina.mantis.model.UserData;
 import ru.lanwen.verbalregex.VerbalExpression;
 
 import javax.mail.MessagingException;
@@ -20,22 +21,18 @@ public class changePasswordTest  extends TestBase {
   }
 
   @Test
-  public void testRegistration() throws IOException, MessagingException {
-   /* long now = System.currentTimeMillis();
-    String email = String.format("user%s@localhost.localdomain", now);
-    String user = String.format("user%s", now);
-    String password = "password";*/
+  public void testChangePassword() throws IOException, MessagingException {
     app.registration().login("administrator", "root");
-    app.goTo().ManageUsers();
-    resetPassword("test_user", "newpassword");
-    List<MailMessage> mailMessages = app.mail().waitForMail(2, 10000);
-   // String confirmationLink = findConfirmationLink(mailMessages, email);
-   //app.registration().finish(confirmationLink, password);
-    //assertTrue(app.newSession().login(user, password));
-
-  }
-
-  private void resetPassword(String user, String newpassword) {
+    UserData user = app.db().users().iterator().next();
+    String username = user.getUsername();
+    String email = user.getEmail();
+    String newpassword = "newpassword1";
+    app.edit().user(username);
+    app.edit().passwordBegin();
+    List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
+    String confirmationLink = findConfirmationLink(mailMessages, email);
+    app.edit().passwordFinish(confirmationLink, newpassword);
+    assertTrue(app.newSession().login(username, newpassword));
 
   }
 

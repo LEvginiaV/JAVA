@@ -85,22 +85,23 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="ru.Lopatina.sandbox" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
-      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.Lopatina.mantis.appmanager" />
-      <recent name="ru.Lopatina.mantis.tests" />
-      <recent name="ru.Lopatina.addressbook.appmanager" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.Lopatina.mantis.appmanager" />
       <recent name="ru.Lopatina.addressbook.appmanager" />
       <recent name="ru.Lopatina.addressbook" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.Lopatina.sandbox" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.Lopatina.mantis.tests" />
+      <recent name="ru.Lopatina.mantis.appmanager" />
+      <recent name="ru.Lopatina.mantis.model" />
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
+      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -115,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests">
+  <component name="RunManager" selected="Gradle.changePasswordTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -128,12 +129,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactAdditionToGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactAdditionToGroup&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.mantis.tests.DbConnectionTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -148,32 +149,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactDeletionFromGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactDeletionFromGroup&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ContactHomePageInfoTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactHomePageInfoTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.mantis.tests.HbConnectionTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -214,6 +195,26 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;ru.Lopatina.mantis.tests.RegistrationTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="changePasswordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.mantis.tests.changePasswordTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -363,6 +364,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="changePasswordTest" type="TestNG" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="ru.Lopatina.mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.Lopatina.mantis.tests.changePasswordTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -373,24 +395,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.ContactHomePageInfoTests" />
-      <item itemvalue="Gradle.ContactDeletionFromGroup" />
-      <item itemvalue="Gradle.ContactAdditionToGroup" />
       <item itemvalue="Gradle.LoginTests" />
       <item itemvalue="Gradle.RegistrationTests" />
+      <item itemvalue="Gradle.changePasswordTest" />
+      <item itemvalue="TestNG.changePasswordTest" />
       <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
+      <item itemvalue="Gradle.DbConnectionTest" />
+      <item itemvalue="Gradle.HbConnectionTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RegistrationTests" />
-        <item itemvalue="Gradle.LoginTests" />
-        <item itemvalue="Gradle.ContactAdditionToGroup" />
-        <item itemvalue="Gradle.ContactDeletionFromGroup" />
-        <item itemvalue="Gradle.ContactHomePageInfoTests" />
+        <item itemvalue="Gradle.changePasswordTest" />
+        <item itemvalue="Gradle.HbConnectionTest" />
+        <item itemvalue="Gradle.DbConnectionTest" />
+        <item itemvalue="Gradle.DbConnectionTest" />
+        <item itemvalue="Gradle.DbConnectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -432,6 +455,11 @@
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/Lopatina/addressbook/appmanager/ContactHelper.java</url>
           <line>200</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/Lopatina/mantis/tests/changePasswordTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

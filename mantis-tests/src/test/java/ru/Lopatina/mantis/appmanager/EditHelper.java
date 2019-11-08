@@ -9,21 +9,24 @@ public class EditHelper extends HelperBase {
     super(app);
   }
 
-  public void ManageUsers() {
-    if (isElementPresent(By.tagName("h4"))
-            && wd.findElement(By.tagName("h4")).getText().equals("\n" +
-            "\tManage Accounts\t")) {
-      return;
+  public void user(String user) {
+    if (!isElementPresent(By.linkText("Manage Users")) ) {
+      click(By.xpath("//li[6]/a/span"));
     }
-    //click(By.linkText(" Manage "));
-    click(By.cssSelector("li[class='active']"));
-    click(By.linkText("Manage Users"));
+    if (!wd.findElement(By.tagName("h4")).getText().equals("\n" + "\tManage Accounts\t")) {
+      click(By.linkText("Manage Users"));
+    }
+    click(By.linkText(user));
   }
-/*
-  public void homePage() {
-    if (isElementPresent(By.id("mailtable"))) {
-      return;
-    }
-    click(By.linkText("home"));
-  }*/
+
+  public void passwordBegin() {
+    click(By.cssSelector("input[value='Reset Password']"));
+  }
+
+  public void passwordFinish(String confirmationLink, String password) {
+    wd.get(confirmationLink);
+    type(By.name("password"), password);
+    type(By.name("password_confirm"), password);
+    click(By.cssSelector("button[type='submit']"));
+  }
 }

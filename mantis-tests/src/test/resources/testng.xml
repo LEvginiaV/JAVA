@@ -5,6 +5,9 @@
         <classes>
             <class name="ru.Lopatina.mantis.tests.LoginTests"/>
             <class name="ru.Lopatina.mantis.tests.RegistrationTests"/>
+            <class name="ru.Lopatina.mantis.tests.changePasswordTest"/>
+            <class name="ru.Lopatina.mantis.tests.DbConnectionTest"/>
+            <class name="ru.Lopatina.mantis.tests.HbConnectionTest"/>
         </classes>
     </test>
 </suite>
