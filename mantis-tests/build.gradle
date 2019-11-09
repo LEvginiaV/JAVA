@@ -17,6 +17,7 @@
   implementation 'com.google.code.gson:gson:2.8.6'
   implementation 'org.hibernate:hibernate-core:5.4.2.Final'
   implementation 'mysql:mysql-connector-java:8.0.18'
+  implementation 'biz.futureware.mantis:mantis-axis-soap-client:1.2.19'
  }
 
  test {

@@ -8,6 +8,7 @@
             <class name="ru.Lopatina.mantis.tests.changePasswordTest"/>
             <class name="ru.Lopatina.mantis.tests.DbConnectionTest"/>
             <class name="ru.Lopatina.mantis.tests.HbConnectionTest"/>
+            <class name="ru.Lopatina.mantis.tests.SoapTests"/>
         </classes>
     </test>
 </suite>
