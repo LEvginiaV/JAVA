@@ -7,6 +7,7 @@ import com.google.gson.reflect.TypeToken;
 import org.apache.http.client.fluent.Executor;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.message.BasicNameValuePair;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class RestTests {
 
   @Test
   public void testCreateIssue() throws IOException {
+    skipIfNotFixed(2050);
     Set<Issue> oldIssues = getIssues();
     Issue newIssue = new Issue().withSubject("Test issue").withDescription("New test issue");
     int issueID = createIssue(newIssue);
@@ -45,5 +47,17 @@ public class RestTests {
             .returnContent().asString();
     JsonElement parsed = new JsonParser().parse(json);
     return parsed.getAsJsonObject().get("issue_id").getAsInt();
+  }
+
+  public void skipIfNotFixed(int issueId) throws IOException {
+    if (isIssueOpen(issueId)) {
+      throw new SkipException("Ignored because of issue " + issueId);
+    }
+  }
+
+  private boolean isIssueOpen(int issueId) throws IOException {
+    Set<Issue> Issues = getIssues();
+    Issue issue = Issues.stream().filter((s) -> (s.getId() == issueId)).findFirst().get();
+    return  (!issue.getState_name().equals("Resolved") && issue.getState_name().equals("Closed"));
   }
 }
