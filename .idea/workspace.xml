@@ -100,7 +100,7 @@
   <component name="PropertiesComponent">
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rest-sample/src/test/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15820312" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -419,16 +419,16 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.changePasswordTest" />
+      <item itemvalue="Gradle.HbConnectionTest" />
+      <item itemvalue="Gradle.GeoIPServiceTests" />
+      <item itemvalue="Gradle.SoapTests" />
+      <item itemvalue="Gradle.RestTests" />
       <item itemvalue="TestNG.changePasswordTest" />
       <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
-      <item itemvalue="Gradle.HbConnectionTest" />
-      <item itemvalue="Gradle.GeoIPServiceTests" />
-      <item itemvalue="Gradle.SoapTests" />
-      <item itemvalue="Gradle.RestTests" />
     </list>
     <recent_temporary>
       <list>
@@ -486,8 +486,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/Lopatina/rest/RestTests.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="10" />
+          <line>27</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
