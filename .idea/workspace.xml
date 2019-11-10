@@ -48,30 +48,11 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="addressbook-web-tests" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="mantis-tests" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mantis-tests" type="f1a62948:ProjectNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mantis-tests" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="soap-sample" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="soap-sample" type="f1a62948:ProjectNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
               </path>
             </expand>
             <select />
@@ -106,25 +87,26 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.Lopatina.rest" />
-      <recent name="ru.Lopatina.mantis.appmanager" />
-      <recent name="ru.Lopatina.addressbook.appmanager" />
-      <recent name="ru.Lopatina.addressbook" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.sandbox" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.Lopatina.mantis.tests" />
-      <recent name="ru.Lopatina.mantis.appmanager" />
-      <recent name="ru.Lopatina.mantis.model" />
-      <recent name="ru.Lopatina.addressbook.appmanager" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\workspace\JAVA_lessons\rest-sample\src\test\resources" />
       <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
       <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.Lopatina.rest" />
+      <recent name="ru.Lopatina.mantis.tests" />
+      <recent name="ru.Lopatina.mantis.appmanager" />
+      <recent name="ru.Lopatina.mantis.model" />
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.Lopatina.rest" />
+      <recent name="ru.Lopatina.mantis.appmanager" />
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+      <recent name="ru.Lopatina.addressbook" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -192,6 +174,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="RestAssuredTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.rest.RestAssuredTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="RestTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -218,26 +220,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;ru.Lopatina.mantis.tests.SoapTests&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="changePasswordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.mantis.tests.changePasswordTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -418,7 +400,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.changePasswordTest" />
       <item itemvalue="Gradle.HbConnectionTest" />
       <item itemvalue="Gradle.GeoIPServiceTests" />
       <item itemvalue="Gradle.SoapTests" />
@@ -429,14 +410,15 @@
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
+      <item itemvalue="Gradle.RestAssuredTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.RestTests" />
+        <item itemvalue="Gradle.RestAssuredTests" />
         <item itemvalue="Gradle.RestTests" />
         <item itemvalue="Gradle.SoapTests" />
         <item itemvalue="Gradle.GeoIPServiceTests" />
-        <item itemvalue="Gradle.changePasswordTest" />
       </list>
     </recent_temporary>
   </component>
@@ -486,8 +468,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/Lopatina/rest/RestTests.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="11" />
+          <line>21</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/Lopatina/rest/RestAssuredTests.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
