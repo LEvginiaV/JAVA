@@ -121,7 +121,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.RestTests">
+  <component name="RunManager" selected="Gradle.RestAssuredTests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -414,8 +414,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RestTests" />
         <item itemvalue="Gradle.RestAssuredTests" />
+        <item itemvalue="Gradle.RestTests" />
         <item itemvalue="Gradle.RestTests" />
         <item itemvalue="Gradle.SoapTests" />
         <item itemvalue="Gradle.GeoIPServiceTests" />
