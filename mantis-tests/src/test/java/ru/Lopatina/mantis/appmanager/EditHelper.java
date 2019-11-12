@@ -11,7 +11,7 @@ public class EditHelper extends HelperBase {
 
   public void user(String user) {
     if (!isElementPresent(By.linkText("Manage Users")) ) {
-      click(By.xpath("//li[6]/a/span"));
+      click(By.xpath("//li[7]/a/span"));
     }
     if (!wd.findElement(By.tagName("h4")).getText().equals("\n" + "\tManage Accounts\t")) {
       click(By.linkText("Manage Users"));

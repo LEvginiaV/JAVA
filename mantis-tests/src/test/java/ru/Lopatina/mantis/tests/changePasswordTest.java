@@ -23,7 +23,7 @@ public class changePasswordTest  extends TestBase {
   @Test
   public void testChangePassword() throws IOException, MessagingException {
     app.registration().login("administrator", "root");
-    UserData user = app.db().users().iterator().next();
+    UserData user = app.db().users().stream().filter((m) -> !m.getUsername().equals("administrator")).iterator().next();
     String username = user.getUsername();
     String email = user.getEmail();
     String newpassword = "newpassword1";
