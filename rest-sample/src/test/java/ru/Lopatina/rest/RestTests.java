@@ -19,7 +19,7 @@ public class RestTests {
 
   @Test
   public void testCreateIssue() throws IOException {
-    skipIfNotFixed(2050);
+    skipIfNotFixed(2048);
     Set<Issue> oldIssues = getIssues();
     Issue newIssue = new Issue().withSubject("Test issue").withDescription("New test issue");
     int issueID = createIssue(newIssue);
@@ -56,11 +56,17 @@ public class RestTests {
   }
 
   private boolean isIssueOpen(int issueId) throws IOException {
-    Set<Issue> Issues = getIssues();
-    if (Issues.stream().filter((s) -> (s.getId() == issueId)).findAny().isPresent()) {
-      Issue issue = Issues.stream().filter((s) -> (s.getId() == issueId)).findFirst().get();
-      return  (issue.getState_name().equals("Open") || issue.getState_name().equals("In Progress") || issue.getState_name().equals("Re-opened"));
-    }
-    return  false;
+    Issue issue = getIssue(issueId);
+      return  (issue.getState_name().equals("Open") || issue.getState_name().equals("In Progress")
+              || issue.getState_name().equals("Re-opened"));
+  }
+
+  private Issue getIssue(int issueId) throws IOException {
+    String json = getExecutor().execute(Request.Get("https://bugify.stqa.ru/api/issues/" + issueId + ".json"))
+            .returnContent().asString();
+    JsonElement parsed = new JsonParser().parse(json);
+    JsonElement issues = parsed.getAsJsonObject().get("issues");
+    Set<Issue> issueWithId = new Gson().fromJson(issues, new TypeToken<Set<Issue>>(){}.getType());
+    return issueWithId.iterator().next();
   }
 }

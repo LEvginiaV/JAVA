@@ -112,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.changePasswordTest">
+  <component name="RunManager" selected="Gradle.RestTests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -205,12 +205,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="HbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RestTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.HbConnectionTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.rest.RestTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -394,22 +394,22 @@
       <item itemvalue="Gradle.ContactCreationTests" />
       <item itemvalue="Gradle.GroupCreationTests" />
       <item itemvalue="Gradle.ContactAdditionToGroup" />
-      <item itemvalue="Gradle.HbConnectionTest" />
+      <item itemvalue="Gradle.ContactDeletionTests" />
       <item itemvalue="TestNG.changePasswordTest" />
       <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
-      <item itemvalue="Gradle.ContactDeletionTests" />
+      <item itemvalue="Gradle.RestTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RestTests" />
         <item itemvalue="Gradle.ContactDeletionTests" />
         <item itemvalue="Gradle.ContactCreationTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.ContactAdditionToGroup" />
-        <item itemvalue="Gradle.HbConnectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -469,8 +469,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/Lopatina/rest/RestTests.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rest-sample/src/test/java/ru/Lopatina/rest/RestTests.java</url>
           <line>58</line>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
