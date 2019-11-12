@@ -71,20 +71,21 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rest-sample/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15820312" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.Lopatina.rest" />
+      <recent name="ru.Lopatina.mantis.appmanager" />
+      <recent name="ru.Lopatina.addressbook.appmanager" />
+      <recent name="ru.Lopatina.addressbook" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.sandbox" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\JAVA_lessons\rest-sample\src\test\resources" />
-      <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
-      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.Lopatina.rest" />
@@ -93,11 +94,10 @@
       <recent name="ru.Lopatina.mantis.model" />
       <recent name="ru.Lopatina.addressbook.appmanager" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.Lopatina.rest" />
-      <recent name="ru.Lopatina.mantis.appmanager" />
-      <recent name="ru.Lopatina.addressbook.appmanager" />
-      <recent name="ru.Lopatina.addressbook" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\JAVA_lessons\addressbook-web-tests\src\test\resources" />
+      <recent name="C:\workspace\JAVA_lessons\rest-sample\src\test\resources" />
+      <recent name="C:\workspace\JAVA_lessons\mantis-tests\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -112,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.GroupCreationTests">
+  <component name="RunManager" selected="Gradle.ContactDeletionTests">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -165,6 +165,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ContactDeletionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.ContactDeletionTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTestContacts" />
+            <option value=":testContacts" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -191,26 +211,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;ru.Lopatina.addressbook.tests.HbConnectionTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RestAssuredTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.Lopatina.rest.RestAssuredTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -391,7 +391,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.RestAssuredTests" />
       <item itemvalue="Gradle.ContactCreationTests" />
       <item itemvalue="Gradle.GroupCreationTests" />
       <item itemvalue="Gradle.ContactAdditionToGroup" />
@@ -402,14 +401,15 @@
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
+      <item itemvalue="Gradle.ContactDeletionTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GroupCreationTests" />
+        <item itemvalue="Gradle.ContactDeletionTests" />
         <item itemvalue="Gradle.ContactCreationTests" />
+        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.ContactAdditionToGroup" />
         <item itemvalue="Gradle.HbConnectionTest" />
-        <item itemvalue="Gradle.RestAssuredTests" />
       </list>
     </recent_temporary>
   </component>
